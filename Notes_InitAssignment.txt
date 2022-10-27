@@ -1,0 +1,77 @@
+#1 Dựng lớp Rectangle - dài, rộng, tính diện tích, chu vi
+# Length, Width
+Nếu ko ép kiểu khi input
+Result ra được đều là String mặc dù input vào là số
+Since Python 3, input returns a string which you have to explicitly convert to ints, with int, like this
+Researched refer to https://stackoverflow.com/questions/20449427/how-can-i-read-inputs-as-numbers
+==> Chưa có cách giải quyết
+Khi ép thành kiểu int 
+Nếu user input số thập Phân thì sẽ báo lỗi
+ValueError: invalid literal for int() with base 10: '2.5'
+Cần thêm hàm check input value có phải số nguyên ko, nếu ko yêu cầu user nhập lại
+==> Vấn đề gặp phải: làm sao để gọi lại hàm input nếu user nhập sai lần thứ 2
+==> Sử dụng hàm while true
+while True:
+  if type(a) is not int:
+    print("Please try again..")
+    a = input("Please enter the number ... =")
+
+Tách hàm check thành 1 hàm riêng biệt
+Trong đó sẽ chuyển input thành dạng float
+==> Vấn đề gặp phải: Value đã chuyển thành number nhưng ko dùng được ở những function khác
+==> Cách giải quyết: Tạo biến rỗng input_1 ở trên class, sau đó có thể tái sử dụng với cú pháp self.input_1
+--- Nhưng vẫn chưa hiểu vì sao có thể sử dung self.input_1 dù ko khai báo ở hàm init
+
+
+
+
+
+
+
+
+
+
+#3
+Không thể dùng hàm while True với nhiều Try conditions
+def inputNV(self):
+        self.ten = input("Input Ho va Ten: ")
+        
+        self.diachi = input("Input dia chi: ")
+        while True:
+            try:
+                self.tuoi = int(input("Input tuoi cua nhan vien: "))
+            except ValueError:
+                print("Please input again.")
+            else:
+                break
+                 
+            try:
+                self.tienluong = int(input("Input luong cơ bản: "))
+            except ValueError:
+                print("Please input again.")
+            else:
+                break  
+            try:
+                self.sogiolam = int(input("Input so gio lam viec: "))
+            except ValueError:
+                print("Please input again.")
+            else:
+                break
+
+Vòng lặp sẽ bị break khi nhập sai số tuổi
+==> Cách giải quyết là chia ra thành nhiều hàm While True cho từng điều kiện nhập vào
+
+while True:
+            try:
+                self.sogiolam = int(input("Input so gio lam viec: "))
+            except ValueError:
+                print("Please input again.")
+            else:
+                break    
+
+
+Đối với bài #2, nếu để 2 input number 1 và 2 cùng 1 hàm while True, khi nhập sai 1 trong 2 number, sẽ phải nhập lại từ đầu
+
+
+
+   
