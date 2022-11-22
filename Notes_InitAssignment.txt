@@ -74,4 +74,27 @@ while True:
 
 
 
+
+** tạo 1 file input.txt có content
+Tom,19,80
+John,20,90
+Jony,17,91
+Jony,17,93
+Json,21,85
+-> đọc file rồi sort theo yêu cầu -> save lại thành 1 file output.txt
+
+    sub_dict=({"ten": a[0], "tuoi": a[1],"diem":a[2]}).  =====> Output will have 'diem': '91\n'
+    dict[i] = {"ten": a[0], "tuoi": a[1],"diem":a[2].strip()} => Output as expect 'diem': '93'
+
+strip will also remove all space characters (), tab ("\t"), etc... from the beginning and end of the text.
+
+
+
+
+
+
+
+
+
+
    
