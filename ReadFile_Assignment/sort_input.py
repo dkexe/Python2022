@@ -15,7 +15,7 @@ class read_File():
 
         a = i.split(',')
 
-        tuple_A = (a[0], int(a[1]), int(a[2].strip()))
+        tuple_A =  (a[0], int(a[1]), int(a[2].strip()))
         list_A.append(tuple_A)
     f.close()
 
