@@ -91,8 +91,14 @@ strip will also remove all space characters (), tab ("\t"), etc... from the begi
 
 
 
+pytest_Browser
 
-
+Dòng code bị xám đi sau khi set up driver.Chrome
+code-unreachable-when-adding-selenium-chromeoptions
+==> update selenium version mới hơn, sẽ fix được lỗi này 
+pip3 install selenium --upgrade
+Refer
+https://stackoverflow.com/questions/71809769/code-unreachable-when-adding-selenium-chromeoptions
 
 
 

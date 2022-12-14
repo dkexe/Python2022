@@ -17,3 +17,4 @@ def check_URL(input_A):
     except requests.exceptions.ConnectionError:
         print("The URL is invalid")
 check_URL(input_A)
+
